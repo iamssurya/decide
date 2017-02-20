@@ -1,7 +1,6 @@
-# assister
+# Decide
 
-> My glorious app
-
+> Leave your choices to the app and get one based on your luck!
 
 ## Dev
 

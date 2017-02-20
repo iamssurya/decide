@@ -1,0 +1,4 @@
+node_modules
+/dist
+Decide-darwin-x64
+bower_components

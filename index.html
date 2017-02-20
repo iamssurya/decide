@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Decision maker</title>
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body class="container">
+		<div class="row header">
+			<h1 class="text-center">DECIDE</h1>
+		</div>
+		<div class="container">
+			<section class="option-groups">
+				<input type="text" class="form-control options" name="option1" placeholder="option" /><br />
+				<input type="text" class="form-control options" name="option1" placeholder="option" /><br />
+				<input type="text" class="form-control options" name="option1" placeholder="option" /><br />
+				<input type="text" class="form-control options" name="option1" placeholder="option" /><br />
+				<button class="btn btn-sm btn-success center-block" onclick="toss()">Toss</button>
+				
+			</section>
+		</div>
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			function toss(){
+				var options = $('.options');
+				//console.log(options);
+				var opt = [];
+				options.each(function(index,data){
+					if(data.value){
+						opt.push(data.value);
+					}
+				})
+				var random = Math.floor((Math.random() * opt.length) + 1);
+				alert(`Your choice should be ${opt[random]}`);
+			}
+		</script>
+	</body>
+
+</html>
